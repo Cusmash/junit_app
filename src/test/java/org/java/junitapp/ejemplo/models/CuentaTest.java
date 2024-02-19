@@ -94,7 +94,7 @@ class CuentaTest {
     }
 
     @Test
-    @Disabled
+    //@Disabled
     @DisplayName("probando relaciones entre las cuentas y el banco con AcceptAll")
     void testRelacionBancoCuentas() {
         Cuenta cuenta1 = new Cuenta("Jhon Doe", new BigDecimal("2500"));
