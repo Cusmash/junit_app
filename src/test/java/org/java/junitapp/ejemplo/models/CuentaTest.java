@@ -281,4 +281,12 @@ class CuentaTest {
         void testEnvProdDisabled() {
         }
     }
+
+    @RepeatedTest(value=5, name = "Repeticion numero {currentRepetition} de {totalRepetitions}")
+    void testDebitoCuentaRepetir(){
+        cuenta.debito(new BigDecimal(100));
+        assertNotNull(cuenta.getSaldo());
+        assertEquals(900, cuenta.getSaldo().intValue());
+        assertEquals("900.12345", cuenta.getSaldo().toPlainString());
+    }
 }
